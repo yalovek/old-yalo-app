@@ -1,0 +1,6 @@
+{
+  "NODE_ENV": "development",
+  "WEB_CONCURRENCY": 1,
+  "PORT": 3000,
+  "QRAPHQL_URL": "http://localhost:3001"
+}

@@ -1,14 +1,62 @@
 {
   "name": "yalo-app",
   "version": "1.0.0",
-  "description": "app",
+  "description": "Express web app with GraphQL and React",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
+    "start": "babel-node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "app"
+    "web",
+    "app",
+    "express",
+    "qraphql",
+    "react"
   ],
-  "author": "Vaim Yalovenko <yalovek@ya.ru>",
-  "license": "MIT"
+  "author": "Vadim Yalovenko <yalovek@ya.ru>",
+  "license": "MIT",
+  "engine": {
+    "node": "6.9.1",
+    "npm": "3.10.7"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "isomorphic-fetch": "^2.2.1",
+    "nconf": "^0.8.4",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "universal-router": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.10.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "pre-commit": "^1.1.3"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "plugins": [
+      "react",
+      "jsx-a11y",
+      "import"
+    ]
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
+  }
 }
